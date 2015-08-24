@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:context=".MainActivity">
+
+    <include
+            android:id="@+id/tool_bar"
+            layout="@layout/toolbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            />
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+            android:orientation="vertical">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="16dp"
+                android:background="@color/white">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_centerInParent="true">
+
+                <TextView android:id="@+id/tw_place"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="Place"
+                        android:textSize="18dp"
+                        style="@style/txt_single_activity"/>
+                <TextView android:id="@+id/tw_mag"
+                          android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:text="Magnitude"
+                          android:textSize="24dp"
+                          style="@style/txt_single_activity"/>
+                <TextView android:id="@+id/tw_date"
+                          android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:text="Date"
+                          android:textSize="16dp"
+                          style="@style/txt_single_activity"/>
+                <TextView android:id="@+id/tw_depth"
+                          android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:text="Depth"
+                          android:textSize="16dp"
+                          style="@style/txt_single_activity"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <View android:layout_width="match_parent" android:layout_height="0.5dp"
+              android:background="@color/gray12"></View>
+        <fragment
+                android:id="@+id/map"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                class="com.google.android.gms.maps.MapFragment" />
+    </LinearLayout>
+
+
+
+</LinearLayout>

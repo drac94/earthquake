@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Earthquake</string>
+    <string name="action_map">Map</string>
+    <string name="label.depth">Depth: %1$,.2f Km</string>
+    <string name="network.error">No internet connection, data may not be the most current</string>
+    <string name="snackbar.try.again">Try again</string>
+
+</resources>
