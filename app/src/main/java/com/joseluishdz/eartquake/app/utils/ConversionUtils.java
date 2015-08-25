@@ -10,7 +10,7 @@ public class ConversionUtils {
 	public static String getCompleteDateFromTimestamp(long timeStamp) {
 		Calendar cal = Calendar.getInstance();
 		cal.setTimeInMillis(timeStamp);
-		String date = DateFormat.format("yyyy-MM-dd h:mm a", cal).toString();
+		String date = DateFormat.format("yyyy-MM-dd @ h:mm a", cal).toString();
 		return date;
 	}
 

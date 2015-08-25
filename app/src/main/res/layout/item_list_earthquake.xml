@@ -16,13 +16,19 @@
                   android:id="@+id/tw_place"
                   android:text="9km E of Hawthorne, Nevada"
                   android:gravity="center_vertical"
+                  android:textColor="@color/gray87"
                 android:singleLine="true"
                 android:ellipsize="end"/>
+        <ImageView android:id="@+id/iw_mag" android:layout_width="15dp" android:layout_height="15dp"
+                   android:src="@drawable/mag"
+                   android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="5dp"/>
         <TextView android:layout_width="wrap_content" android:layout_height="match_parent"
                   android:id="@+id/tw_magnitude"
                   android:text="5.2"
-                  android:gravity="center_vertical|right"
-                  android:layout_alignParentRight="true"
+                  android:layout_toLeftOf="@id/iw_mag"
+                  android:gravity="center_vertical"
                 android:textColor="@color/gray87"/>
     </RelativeLayout>
 

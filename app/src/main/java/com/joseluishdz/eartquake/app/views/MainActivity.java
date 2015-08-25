@@ -180,8 +180,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void fillMap() {
+        map.clear();
         if(fcm != null && fcm.getFeatures() != null & fcm.getFeatures().size() > 0) {
-            LatLng firstLocation = new LatLng(fcm.getFeatures().get(0).getGeometry().getCoordinates()[1], fcm.getFeatures().get(0).getGeometry().getCoordinates()[0]);
+            LatLng firstLocation = new LatLng(38.0400419, -92.8564435); //center of USA //fcm.getFeatures().get(0).getGeometry().getCoordinates()[1], fcm.getFeatures().get(0).getGeometry().getCoordinates()[0]);
             for (FeatureModel fm : fcm.getFeatures()) {
                 LatLng location = new LatLng(fm.getGeometry().getCoordinates()[1],
                         fm.getGeometry().getCoordinates()[0]);
@@ -232,11 +233,12 @@ public class MainActivity extends AppCompatActivity {
                 }
                 map.addMarker(new MarkerOptions()
                         .position(location)
-                        .title(String.valueOf(fm.getProperties().getMagnitude()))
+                        .title(fm.getProperties().getPlace())
+                        .snippet(String.valueOf(fm.getProperties().getMagnitude()))
                         .icon(bm));
             }
             map.moveCamera(CameraUpdateFactory.newLatLngZoom(
-                    firstLocation, 1));
+                    firstLocation, 3));
         }
         map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
     }
